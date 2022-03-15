@@ -2,4 +2,10 @@ body {
   @extend %manrope500;
   font-size: 15px;
   color: #fff;
+  @extend %bgc-main;
 }
+
+.container {
+  max-width: 1920px;
+}
+
