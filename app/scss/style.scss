@@ -1,7 +1,7 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
 
 .header {
   position: fixed;
@@ -15,18 +15,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 41;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 380px;
     height: 1px;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     top: 50%;
     right: 20px;
     z-index: -1;
   }
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     @extend %bgc-decor;
     width: 8px;
@@ -58,18 +59,18 @@
     text-transform: uppercase;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 150px;
       height: 40px;
       left: 60px;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(255,255,255,0.05);
+      background-color: rgba(255, 255, 255, 0.05);
     }
   }
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     @extend %bgc-decor;
     top: 50%;
@@ -91,7 +92,7 @@
   text-transform: uppercase;
   color: #292929;
   font-weight: 700;
-  transition: all .2s;
+  transition: all 0.2s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,9 +105,141 @@
   }
 }
 
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  width: 280px;
+  &__inner {
+    overflow-y: auto;
+    position: fixed;
+    padding-top: 130px;
+    padding-bottom: 40px;
+    width: 280px;
+    height: 100vh;
+    @extend %bgc-accent;
+    z-index: 40;
+    &::before {
+      content: '';
+      position: fixed;
+      background-color: rgba(255,255,255,0.05);
+      width: 150px;
+      height: 80px;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &__title {
+    font-size: 13px;
+    font-weight: 800;
+    @extend %txtc-accent;
+    text-transform: uppercase;
+    padding: 0 20px;
+    margin-bottom: 15px;
+  }
+}
+
+.nav {
+  margin-bottom: 50px;
+  &__link {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    padding: 18px 20px 18px 60px;
+    background-color: rgba(255,255,255,0.02);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 800;
+    color: #fff;
+    transition: all .2s linear;
+    &:first-child {
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 0;
+      @extend %bgc-decor;
+      transition: all .2s linear;
+    }
+    &:hover {
+      color: #f7b90f;
+      &::before {
+        height: 100%;
+      }
+    }
+  }
+  &__icon {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.contact {
+  margin-bottom: 50px;
+  &__list {
+    margin-bottom: 5px;
+  }
+  &__link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 800;
+    color: #fff;
+    padding: 0 20px 0 40px;
+    transition: all .2s linear;
+    position: relative;
+    &:hover {
+      color: #f7b90f;
+    }
+  }
+  &__icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.messenger {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 20px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(255,255,255,0.1);
+    height: 1px;
+    left: 20px;
+    right: 20px;
+    bottom: -30px;
+  }
+  &__item + .messenger__item {
+    margin-left: 10px;
+  }
+  &__link {
+    @extend %bgc-decor;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s linear;
+    &:hover {
+      border-radius: 100%;
+    }
+  }
+}
 
 
-
-
-
-@import 'media';
+@import "media";
