@@ -3,6 +3,9 @@ body {
   font-size: 15px;
   color: #fff;
   @extend %bgc-main;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 400vh;
 }
 
 .container {
