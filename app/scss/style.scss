@@ -327,7 +327,7 @@
 }
 
 .hero {
-  padding: 50px 50px;
+  padding: 50px;
   position: relative;
   z-index: 5;
   &__inner {
@@ -559,6 +559,108 @@
     opacity: 0.08;
     font-weight: 800;
     z-index: 1;
+  }
+}
+
+.partners {
+  position: relative;
+  z-index: 5;
+  &__bg {
+    margin: 0 50px 50px 50px;
+    padding: 50px;
+    @extend %bgc-accent;
+    @extend %bxshd;
+  }
+  &__title {
+    font-size: 35px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-align: center;
+  }
+  &__text {
+    font-size: 15px;
+    margin-bottom: 50px;
+    line-height: 25px;
+    max-width: 850px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  &__subtitle {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__niche-box {
+    display: flex;
+    justify-content: center;
+  }
+  &__niche {
+    display: block;
+    width: 200px;
+  }
+  &__niche + .partners__niche {
+    margin-left: 30px;
+  }
+  &__niche-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    @extend %bgc-accent2;
+    margin: 0 auto;
+  }
+  &__niche-text {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    display: block;
+    padding-top: 15px;
+    margin-bottom: 50px;
+  }
+  &__slider {
+    display: flex;
+    margin: 0 50px 50px 50px;
+  }
+  &__slider-text {
+    width: 200px;
+    margin-right: 30px;
+  }
+  &__slider-title {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  &__slider-border {
+    height: 1px;
+    background-color: rgba(255,255,255,.1);
+    position: relative;
+    &::before {
+      content: '';
+      left: 0;
+      top: 0;
+      height: 1px;
+      width: 50px;
+      @extend %bgc-decor;
+      position: absolute;
+    }
+  }
+  &__slider-item {
+    @extend %bgc-accent;
+  }
+  &__slider-logo {
+    padding: 20px 50px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    margin-bottom: 50px;
+  }
+  &__slider-name {
+    padding: 0 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  &__slider-descr {
+    padding: 0 15px;
   }
 }
 
