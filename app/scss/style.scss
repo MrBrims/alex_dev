@@ -8,35 +8,39 @@
   height: 80px;
   left: 0;
   top: 0;
-  right: 0;
+  width: 100%;
   @extend %bgc-accent;
   @extend %bxshd;
-  padding: 0 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   z-index: 41;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 380px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
-    top: 50%;
-    right: 20px;
-    z-index: -1;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    @extend %bgc-decor;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    margin-top: -4px;
-    right: 400px;
-    top: 50%;
-    z-index: -1;
+  &__inner {
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.1);
+      top: 50%;
+      right: 20px;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      @extend %bgc-decor;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      margin-top: -4px;
+      right: 400px;
+      top: 50%;
+      z-index: -1;
+    }
   }
 }
 
@@ -104,7 +108,7 @@
   }
 }
 
-.wrapper {
+.main {
   display: flex;
   justify-content: space-between;
   max-width: 1920px;
@@ -242,9 +246,14 @@
 }
 
 .bg-decor {
-  position: fixed;
-  right: -300px;
-  top: 200px;
+  &__wrapper {
+    position: fixed;
+    top: 200px;
+    right: -300px;
+  }
+  &__box {
+    position: relative;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -634,10 +643,10 @@
   }
   &__slider-border {
     height: 1px;
-    background-color: rgba(255,255,255,.1);
+    background-color: rgba(255, 255, 255, 0.1);
     position: relative;
     &::before {
-      content: '';
+      content: "";
       left: 0;
       top: 0;
       height: 1px;
@@ -651,7 +660,7 @@
   }
   &__slider-logo {
     padding: 20px 50px;
-    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 50px;
   }
   &__slider-name {
