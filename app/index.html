@@ -158,7 +158,7 @@
           <ul class="messenger">
             <li class="messenger__item">
               <a class="messenger__link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
                   <path fill="none" d="M0 0h24v24H0z" />
                   <path
                     d="M2.004 22l1.352-4.968A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 0 1-5.03-1.355L2.004 22zM8.391 7.308a.961.961 0 0 0-.371.1 1.293 1.293 0 0 0-.294.228c-.12.113-.188.211-.261.306A2.729 2.729 0 0 0 6.9 9.62c.002.49.13.967.33 1.413.409.902 1.082 1.857 1.971 2.742.214.213.423.427.648.626a9.448 9.448 0 0 0 3.84 2.046l.569.087c.185.01.37-.004.556-.013a1.99 1.99 0 0 0 .833-.231c.166-.088.244-.132.383-.22 0 0 .043-.028.125-.09.135-.1.218-.171.33-.288.083-.086.155-.187.21-.302.078-.163.156-.474.188-.733.024-.198.017-.306.014-.373-.004-.107-.093-.218-.19-.265l-.582-.261s-.87-.379-1.401-.621a.498.498 0 0 0-.177-.041.482.482 0 0 0-.378.127v-.002c-.005 0-.072.057-.795.933a.35.35 0 0 1-.368.13 1.416 1.416 0 0 1-.191-.066c-.124-.052-.167-.072-.252-.109l-.005-.002a6.01 6.01 0 0 1-1.57-1c-.126-.11-.243-.23-.363-.346a6.296 6.296 0 0 1-1.02-1.268l-.059-.095a.923.923 0 0 1-.102-.205c-.038-.147.061-.265.061-.265s.243-.266.356-.41a4.38 4.38 0 0 0 .263-.373c.118-.19.155-.385.093-.536-.28-.684-.57-1.365-.868-2.041-.059-.134-.234-.23-.393-.249-.054-.006-.108-.012-.162-.016a3.385 3.385 0 0 0-.403.004z"
@@ -467,14 +467,49 @@
   <div class="popup" id="popup">
     <div class="popup__body">
       <div class="popup__content">
-        <a class="popup__close close-popup" href="#">X</a>
-        <h3 class="popup__title">Заголовок попапа</h3>
-        <p>Далеко-далеко за словесными горами в стране, гласных и согласных.</p>
-        <p>Залетают гор, послушавшись своего она даль пор?</p>
-        <p>Всемогущая вскоре не переписывается, ручеек вершину своих.</p>
-        <p>Продолжил его рот сбить всеми текстами строчка!</p>
-        <p>Всемогущая маленький даль там, журчит рыбного скатился?</p>
-        <p>Проектах, журчит. Города рыбными она последний переулка.</p>
+        <a class="popup__close close-popup" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path fill="none" d="M0 0h24v24H0z" />
+          <path
+            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"
+            fill="rgba(247,185,15,1)" />
+        </svg></a>
+        <h3 class="popup__title">Оставьте заявку на консультацию</h3>
+        <p class="popup__text">С вами свяжется руководитель студии в течение 15 минут в рабочее время. Если сейчас не рабочее время, напишите ему в
+         <a class="popup__text-link" href="#">Telegram</a>, <a class="popup__text-link" href="#">WhatsApp</a> или <a class="popup__text-link" href="#">Viber</a></p>
+         <div class="popup__border"></div>
+        <form class="popup-form">
+          <label class="popup-form__label" for="popup-name">
+            <span class="popup-form__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                d="M14 14.252v2.09A6 6 0 0 0 6 22l-2-.001a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z"
+                fill="rgba(0,0,0,1)" />
+            </svg></span>
+            <input class="popup-form__input" type="text" placeholder="Имя" id="popup-name">
+          </label>
+          <label class="popup-form__label" for="popup-email">
+            <span class="popup-form__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                d="M22 13h-2V7.238l-7.928 7.1L4 7.216V19h10v2H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v9zM4.511 5l7.55 6.662L19.502 5H4.511zM21 18h3v2h-3v3h-2v-3h-3v-2h3v-3h2v3z"
+                fill="rgba(0,0,0,1)" />
+            </svg></span>
+            <input class="popup-form__input" type="email" placeholder="Email" id="popup-email">
+          </label>
+          <label class="popup-form__label" for="popup-tel">
+            <span class="popup-form__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                d="M9.366 10.682a10.556 10.556 0 0 0 3.952 3.952l.884-1.238a1 1 0 0 1 1.294-.296 11.422 11.422 0 0 0 4.583 1.364 1 1 0 0 1 .921.997v4.462a1 1 0 0 1-.898.995c-.53.055-1.064.082-1.602.082C9.94 21 3 14.06 3 5.5c0-.538.027-1.072.082-1.602A1 1 0 0 1 4.077 3h4.462a1 1 0 0 1 .997.921A11.422 11.422 0 0 0 10.9 8.504a1 1 0 0 1-.296 1.294l-1.238.884zm-2.522-.657l1.9-1.357A13.41 13.41 0 0 1 7.647 5H5.01c-.006.166-.009.333-.009.5C5 12.956 11.044 19 18.5 19c.167 0 .334-.003.5-.01v-2.637a13.41 13.41 0 0 1-3.668-1.097l-1.357 1.9a12.442 12.442 0 0 1-1.588-.75l-.058-.033a12.556 12.556 0 0 1-4.702-4.702l-.033-.058a12.442 12.442 0 0 1-.75-1.588z"
+                fill="rgba(0,0,0,1)" />
+            </svg></span>
+            <input class="popup-form__input" type="tel" placeholder="Телефон" id="popup-tel">
+          </label>
+          <textarea class="popup-form__textarea" placeholder="Ваше сообщение (не обязательно)"></textarea>
+          <input class="popup-form__submit" type="submit" value="Отправить">
+        </form>
+        <div class="popup__pattern"></div>
+        <div class="popup__decor"></div>
       </div>
     </div>
   </div>
