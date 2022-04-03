@@ -8,8 +8,12 @@ body {
   height: 400vh;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .content {
-  width: 100%;
+  width: calc(100% - 280px);
   padding-top: 80px;
 }
 
