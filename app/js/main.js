@@ -124,3 +124,31 @@ document.addEventListener('keydown', function (e) {
   }
 })();
 
+
+
+const tabItem = Array.from(document.querySelectorAll('.tabs__nav-items'))
+const tabContent = Array.from(document.querySelectorAll('.tabs__content-item'))
+
+const clearActiveClass = (element, className = '--active-tab') => {
+  element.find(item => item.classList.remove(`${className}`))
+}
+
+const addActiveClass = (element, index, className = '--active-tab') => {
+  element[index].classList.add(`${className}`)
+}
+
+const checkoutTabs = (item, index) => {
+  item.addEventListener('click', () =>{
+
+    if (item.classList.contains ('--active-tab')) return
+
+    clearActiveClass(tabItem)
+    clearActiveClass(tabContent)
+
+    addActiveClass(tabItem, index)
+    addActiveClass(tabContent, index)
+  })
+}
+
+tabItem.forEach(checkoutTabs)
+
