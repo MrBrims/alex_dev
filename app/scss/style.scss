@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .header {
@@ -388,13 +389,9 @@
     overflow: hidden;
 
     &::before {
-      content: "";
-      position: absolute;
+      @extend %circle;
       width: 200px;
       height: 200px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      background-color: rgba(255, 255, 255, 0.05);
       left: -100px;
       top: -100px;
     }
@@ -495,15 +492,11 @@
   }
 
   &__pattern {
-    position: absolute;
     left: -64px;
     bottom: -79px;
     width: 100%;
     height: 300px;
-    background-image: url(../images/pattern.png);
-    background-repeat: repeat;
-    z-index: 1;
-    opacity: 0.08;
+    @extend %pattern;
   }
 
   &__img-box {
@@ -607,13 +600,9 @@
     width: 33.333%;
 
     &::before {
-      content: "";
-      position: absolute;
+      @extend %circle;
       width: 80px;
       height: 80px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      background-color: rgba(255, 255, 255, 0.05);
       right: -40px;
       top: -40px;
     }
@@ -687,7 +676,7 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
-  
+
   &__nav-items.--active-tab,
   &__nav-items:hover {
     @extend %bgc-main;
@@ -731,9 +720,11 @@
 
   &__bg {
     margin: 0 50px 50px 50px;
-    padding: 50px;
+    padding: 50px 50px 80px 50px;
+    position: relative;
     @extend %bgc-accent;
     @extend %bxshd;
+    overflow: hidden;
   }
 
   &__title {
@@ -741,6 +732,8 @@
     margin-bottom: 15px;
     font-weight: 800;
     text-align: center;
+    position: relative;
+    z-index: 5;
   }
 
   &__text {
@@ -752,22 +745,30 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    position: relative;
+    z-index: 5;
   }
 
   &__subtitle {
     font-size: 20px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 5;
   }
 
   &__niche-box {
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 5;
   }
 
   &__niche {
     display: block;
     width: 200px;
+    position: relative;
+    z-index: 5;
   }
 
   &__niche + .partners__niche {
@@ -780,8 +781,12 @@
     align-items: center;
     width: 150px;
     height: 150px;
-    @extend %bgc-accent2;
+    background-color: #39393e;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 2px;
     margin: 0 auto;
+    position: relative;
+    z-index: 5;
   }
 
   &__niche-text {
@@ -790,7 +795,24 @@
     font-size: 15px;
     display: block;
     padding-top: 15px;
-    margin-bottom: 50px;
+  }
+
+  &__pattern {
+    @extend %pattern;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 200px;
+  }
+
+  &__decor {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -70px;
+    left: -50px;
+    opacity: 0.3;
+    z-index: 1;
   }
 
   &__slider {
@@ -872,7 +894,6 @@
     padding: 80px 50px;
     max-width: 800px;
     width: 100%;
-    max-height: 800px;
     position: relative;
     transition: all 0.8s ease 0s;
     opacity: 0;
@@ -941,15 +962,11 @@
   }
 
   &__pattern {
-    position: absolute;
+    @extend %pattern;
     right: 3px;
     bottom: 3px;
     width: 300px;
     height: 300px;
-    background-image: url(../images/pattern.png);
-    background-repeat: repeat;
-    z-index: 1;
-    opacity: 0.08;
   }
 
   &__decor {
@@ -1061,6 +1078,115 @@
     &:hover {
       opacity: 0.8;
     }
+  }
+}
+
+.popup-partners {
+  &__content {
+    max-width: 1100px;
+    padding: 0;
+    overflow: hidden;
+    &::before {
+      @extend %circle;
+      width: 200px;
+      height: 200px;
+      right: -100px;
+      bottom: -100px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__list {
+    min-width: 60%;
+    width: 60%;
+    margin-right: 20px;
+    @extend %bgc-accent2;
+    padding: 50px;
+  }
+  &__title {
+    font-size: 30px;
+    margin-bottom: 30px;
+    padding-left: 65px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -4px;
+      width: 50px;
+      height: 50px;
+      border-radius: 2px;
+      background-color: #f7b90f;
+    }
+  }
+  &__title-auto {
+    &::before {
+      background-image: url(../images/auto.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__title-repair {
+    &::before {
+      background-image: url(../images/repair.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__title-engineering {
+    &::before {
+      background-image: url(../images/engineering.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__title-interior {
+    &::before {
+      background-image: url(../images/interior.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__title-business {
+    &::before {
+      background-image: url(../images/business.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__text {
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: 700;
+  }
+  &__items {
+    max-height: 600px;
+    overflow: auto;
+    padding-right: 10px;
+  }
+  &__item {
+    font-size: 17px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 1px;
+      @extend %bgc-decor;
+      left: 0;
+      top: 50%;
+    }
+  }
+  &__form {
+    margin-left: 20px;
+    padding: 50px 50px 50px 0;
+  }
+  &__form-title {
+    font-size: 17px;
+    margin-bottom: 30px;
   }
 }
 
