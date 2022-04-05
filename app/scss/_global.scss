@@ -17,11 +17,12 @@ body.lock {
   padding-top: 80px;
 }
 
-.simplebar-track.simplebar-vertical {
-  @extend %bgc-accent;
+.popup-partners {
+  .simplebar-track.simplebar-vertical {
+    @extend %bgc-accent;
+  }
 }
 
 .accent {
   color: #f7b90f;
 }
-
