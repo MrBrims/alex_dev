@@ -33,6 +33,7 @@ function scripts() {
   return src([
     'node_modules/parallax-js/dist/parallax.min.js',
     'node_modules/simplebar/dist/simplebar.min.js',
+    'node_modules/swiper/swiper-bundle.min.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
