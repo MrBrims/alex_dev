@@ -152,3 +152,17 @@ const checkoutTabs = (item, index) => {
 
 tabItem.forEach(checkoutTabs)
 
+var swiper = new Swiper(".swiperPartners", {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: ".partners__slider-next",
+    prevEl: ".partners__slider-prev",
+  },
+  pagination: {
+    el: ".partners-pagination",
+    clickable: true,
+  },
+});
+
