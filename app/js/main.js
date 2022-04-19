@@ -152,6 +152,34 @@ const checkoutTabs = (item, index) => {
 
 tabItem.forEach(checkoutTabs)
 
+
+const marketingItem = Array.from(document.querySelectorAll('.marketing__name-box'))
+const marketingContent = Array.from(document.querySelectorAll('.marketing__description'))
+
+const clearMarketingClass = (element, className = '--marketing-active') => {
+  element.find(item => item.classList.remove(`${className}`))
+}
+
+const addMarketingClass = (element, index, className = '--marketing-active') => {
+  element[index].classList.add(`${className}`)
+}
+
+const checkoutMarketingTabs = (item, index) => {
+  item.addEventListener('click', () => {
+
+    if (item.classList.contains('--marketing-active')) return
+
+    clearMarketingClass(marketingItem)
+    clearMarketingClass(marketingContent)
+
+    addMarketingClass(marketingItem, index)
+    addMarketingClass(marketingContent, index)
+  })
+}
+
+marketingItem.forEach(checkoutMarketingTabs)
+
+
 var swiper = new Swiper(".swiperPartners", {
   slidesPerView: 3,
   spaceBetween: 10,
