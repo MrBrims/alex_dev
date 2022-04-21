@@ -197,6 +197,11 @@
       }
     }
   }
+  &__link.nav__link--active {
+    &::before {
+      height: 100%;
+    }
+  }
 
   &__icon {
     position: absolute;
@@ -1601,7 +1606,7 @@
   }
 }
 
-.contact {
+.scale {
   position: relative;
   z-index: 5;
   &__map {
@@ -1651,6 +1656,11 @@
     position: relative;
     z-index: 2;
   }
+}
+
+.request {
+  position: relative;
+  z-index: 5;
   &__wrapper {
     margin: 100px 50px;
     padding: 50px;
@@ -1707,10 +1717,11 @@
     z-index: 1;
     transform: rotate(45deg);
     svg {
-      opacity: .1;
+      opacity: 0.1;
     }
   }
 }
+
 
 .popup {
   position: fixed;
