@@ -194,3 +194,44 @@ var swiper = new Swiper(".swiperPartners", {
   },
 });
 
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      document.querySelectorAll('.nav__link').forEach((link) => {
+        link.classList.toggle(
+          'nav__link--active',
+          link.getAttribute('href').replace('#', '') === entry.target.id
+        );
+      });
+    }
+  });
+}, {
+  threshold: 0.5,
+});
+
+document.querySelectorAll('.section').forEach(
+  (section) => observer.observe(section),
+);
+
+
+const menuLinks = document.querySelectorAll('.nav__link[data-goto]');
+if (menuLinks.length > 0) {
+  menuLinks.forEach(menuLink => {
+    menuLink.addEventListener("click", onMenuLinkClick);
+  });
+
+  function onMenuLinkClick(e) {
+    const menuLink = e.target;
+    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+      const gotoBlock = document.querySelector(menuLink.dataset.goto);
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
+
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: "smooth"
+      });
+      e.preventDefault();
+    }
+  }
+}
