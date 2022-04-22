@@ -1,0 +1,50 @@
+@media (max-width:1750px) {
+  .deal__btn::before {
+    left: 30%;
+  }
+}
+
+@media (max-width:1600px) {
+  .menu-btn {
+    display: block;
+  }
+  .menu-btn.--sidebar-active {
+    span {
+      transform: scale(0);
+    }
+    .menu-btn__inner::before {
+      transform: rotate(-45deg);
+      top: 7px;
+    }
+    .menu-btn__inner::after {
+      transform: rotate(45deg);
+      top: 7px;
+    }
+  }
+  .sidebar {
+    position: absolute;
+    z-index: 7;
+    left: -300px;
+    top: 0;
+    transition: left .3s ease-in-out;
+    &__close {
+      display: block;
+    }
+  }
+  .sidebar.--sidebar-active {
+    left: 0;
+  }
+  .content {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .content.--sidebar-active{
+    &::before {
+      display: block;
+    }
+  }
+  .deal__btn::before {
+    left: 50%;
+  }
+}

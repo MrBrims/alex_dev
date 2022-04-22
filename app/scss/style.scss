@@ -93,6 +93,61 @@
   }
 }
 
+.menu-btn {
+  @extend %bgc-main;
+  padding: 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+    margin-right: 10px;
+  }
+  &__inner {
+    position: relative;
+    width: 30px;
+    height: 16px;
+    span {
+      width: 100%;
+      display: inline-block;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      transform: scale(1) translate(0,-50%);
+      @extend %bgc-decor;
+      transition: all .2s ease-in-out;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      display: inline-block;
+      @extend %bgc-decor;
+      top: 0;
+      left: 0;
+      transition: all .2s ease-in-out;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      display: inline-block;
+      @extend %bgc-decor;
+      bottom: 0;
+      left: 0;
+      transition: all .2s ease-in-out;
+    }
+  }
+}
+
 .modal-btn {
   padding: 0 38px;
   height: 45px;
@@ -118,12 +173,6 @@
   }
 }
 
-.main {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1920px;
-}
-
 .sidebar {
   min-width: 280px;
 
@@ -136,15 +185,35 @@
     height: 100vh;
     @extend %bgc-accent;
     z-index: 40;
+  }
 
+  &__close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+    right: 19px;
+    top: 97px;
+    display: none;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      @extend %bgc-decor;
+      transform: rotate(45deg);
+    }
     &::before {
       content: "";
-      position: fixed;
-      background-color: rgba(255, 255, 255, 0.05);
-      width: 150px;
-      height: 80px;
+      position: absolute;
+      top: 15px;
       left: 0;
-      bottom: 0;
+      width: 100%;
+      height: 2px;
+      @extend %bgc-decor;
+      transform: rotate(-45deg);
     }
   }
 
@@ -1054,11 +1123,11 @@
 .portfolio {
   position: relative;
   z-index: 5;
+
   &__items {
     margin: 0 50px 50px 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     grid-gap: 10px;
   }
   &__item {
@@ -1380,7 +1449,10 @@
     height: 350px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin-right: 50px;
+    @extend %bxshd;
+    border-radius: 2px;
   }
   &__description-list {
     width: 100%;
