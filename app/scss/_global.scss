@@ -11,10 +11,28 @@ body.lock {
   overflow: hidden;
 }
 
+.main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1920px;
+  position: relative;
+}
+
 .content {
   width: calc(100% - 280px);
   padding-top: 80px;
   position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 6;
+    display: none;
+  }
 }
 
 .popup-partners {
