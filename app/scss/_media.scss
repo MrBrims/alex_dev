@@ -1,10 +1,10 @@
-@media (max-width:1750px) {
+@media (max-width: 1750px) {
   .deal__btn::before {
     left: 30%;
   }
 }
 
-@media (max-width:1600px) {
+@media (max-width: 1600px) {
   .menu-btn {
     display: block;
   }
@@ -26,7 +26,7 @@
     z-index: 7;
     left: -300px;
     top: 0;
-    transition: left .3s ease-in-out;
+    transition: left 0.3s ease-in-out;
     &__close {
       display: block;
     }
@@ -39,12 +39,797 @@
     margin: 0 auto;
     position: relative;
   }
-  .content.--sidebar-active{
+  .content.--sidebar-active {
     &::before {
       display: block;
     }
   }
   .deal__btn::before {
     left: 50%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .hero {
+    &__title {
+      font-size: 45px;
+      line-height: 52px;
+    }
+  }
+
+  .deal {
+    &__wrapper {
+      position: relative;
+      &::before {
+        right: 10px;
+        left: auto;
+      }
+    }
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__offer {
+      width: 100%;
+      min-width: 100%;
+      margin-bottom: 30px;
+    }
+    &__btn::before {
+      display: none;
+    }
+    &__offer-img {
+      right: 0;
+      left: auto;
+      top: 50%;
+      z-index: 1;
+      opacity: 0.5;
+    }
+    &__text {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .task {
+    &__item {
+      padding: 30px 15px;
+    }
+    &__item + .task__item {
+      margin-left: 10px;
+    }
+    &__icon {
+      margin-right: 15px;
+    }
+    &__step {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .marketing {
+    &__description-box {
+      padding: 15px;
+    }
+    &__description-item {
+      width: 100%;
+      padding: 15px 10px;
+    }
+    &__description-img {
+      margin-right: 20px;
+    }
+  }
+
+  .scale {
+    &__map {
+      margin-top: 0;
+      height: 460px;
+    }
+    &__decor {
+      font-size: 130px;
+    } 
+  }
+}
+
+@media (max-width: 1050px) {
+  .logo {
+    &::before {
+      display: none;
+    }
+    &__text {
+      display: none;
+    }
+  }
+
+  .hero {
+    &__title {
+      font-size: 35px;
+      line-height: 44px;
+    }
+    &__subtitle {
+      font-size: 18px;
+    }
+  }
+
+  .partners {
+    &__bg {
+      padding: 40px 70px 20px 70px;
+    }
+    &__niche-box {
+      flex-wrap: wrap;
+    }
+    &__niche {
+      margin-bottom: 20px;
+    }
+    &__niche + .partners__niche {
+      margin-left: 0;
+    }
+  }
+
+  .task {
+    &__inner {
+      padding: 30px;
+    }
+  }
+
+  .scale {
+    &__map {
+      position: relative;
+      margin-bottom: 0;
+    }
+    &__text {
+      width: 100%;
+      min-width: 100%;
+    }
+    &__title {
+      margin-right: 0;
+      font-size: 30px;
+    }
+    &__img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+    }
+  }
+
+  .request {
+    &__wrapper {
+      margin-top: 50px;
+    }
+    &__mokup-box {
+      display: none;
+    }
+    &__form-box {
+      width: 100%;
+      min-width: 100%;
+      .popup-form {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .hero {
+    &__text {
+      min-width: 100%;
+      margin-right: 0;
+    }
+    &__img-box {
+      display: none;
+    }
+    &__bage-subtitle {
+      line-height: 1.5;
+    }
+  }
+
+  .partners {
+    &__title {
+      font-size: 30px;
+      line-height: 1.2;
+    }
+    &__text {
+      margin-bottom: 20px;
+    }
+    &__slider-text {
+      width: 170px;
+      min-width: 170px;
+      margin-right: 10px;
+    }
+    &__slider-title {
+      font-size: 18px;
+    }
+    &__slider-nav {
+      padding-left: 230px;
+    }
+  }
+
+  .task {
+    &__title {
+      font-size: 30px;
+      line-height: 1.2;
+    }
+    &__subtitle {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .marketing {
+    &__title {
+      font-size: 30px;
+      line-height: 1.2;
+    }
+    &__description-header {
+      flex-wrap: wrap;
+    }
+    &__description-img {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .deal {
+    &__title {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 30px;
+    }
+
+    &__offer-img {
+      display: none;
+    }
+  }
+
+  .request {
+    &__offer {
+      font-size: 26px;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .task {
+    &__items {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    &__item + .task__item {
+      margin-left: 0;
+    }
+  }
+
+  .request {
+    &__wrapper {
+      margin-top: 30px;
+    }
+  }
+    
+  .popup-partners {
+    &__list {
+      padding: 15px;
+    }
+    &__title {
+      font-size: 26px;
+      line-height: 1.2;
+    }
+    &__form {
+      padding: 15px 15px 15px 0;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .hero {
+    &__bage-icon {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__inner {
+      padding: 0 15px;
+    }
+  }
+
+  .hero {
+    padding: 30px 15px;
+    &__inner {
+      padding: 30px;
+      margin-bottom: 10px;
+    }
+    &__form {
+      max-width: 100%;
+      margin-right: 0;
+    }
+    &__bage-item + .hero__bage-item {
+      margin-left: 10px;
+    }
+  }
+
+  .partners {
+    &__bg {
+      padding: 30px;
+      margin: 15px;
+    }
+    &__subtitle {
+      font-size: 18px;
+    }
+    &__slider {
+      margin: 15px;
+    }
+    &__slider-nav {
+      padding-left: 197px;
+    }
+  }
+
+  .task {
+    &__inner {
+      margin: 15px 15px 30px 15px;
+    }
+  }
+
+  .portfolio {
+    &__items {
+      margin: 15px;
+    }
+    &__offer {
+      margin: 15px 15px 30px 15px;
+    }
+  }
+
+  .marketing {
+    &__container {
+      margin: 0 15px 30px 15px;
+    }
+    &__bg {
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__methods {
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+      top: 0;
+      padding-right: 0;
+    }
+    &__name-box::before {
+      display: none;
+    }
+  }
+
+  .deal {
+    &__wrapper {
+      margin: 0 15px 30px 15px;
+      padding: 30px;
+    }
+  }
+
+  .scale {
+    &__map {
+      margin: 0 15px 30px 15px;
+    }
+    &__title {
+      padding: 15px;
+    }
+    &__decor {
+      font-size: 90px;
+    }
+  }
+
+  .request {
+    &__wrapper {
+      margin: 0 15px 30px 15px;
+      padding: 15px;
+    }
+    &__offer {
+      margin-bottom: 20px;
+    }
+    &__offer-subtitle {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .popup-partners {
+    &__list {
+      width: 100%;
+      min-width: 100%;
+      margin-right: 0;
+    }
+    &__form {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .portfolio {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .scale {
+    &__map {
+      height: auto;
+    }
+    &__img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .header {
+    &__inner::before,
+    &__inner::after {
+      display: none;
+    }
+  }
+
+  .hero {
+    &__bage-item {
+      padding: 15px;
+    }
+  }
+
+  .portfolio {
+    &__offer::after {
+      right: 20px;
+    }
+  }
+
+  .scale {
+    &__title {
+      font-size: 26px;
+    }
+  }
+
+  .popup-partners {
+    &__list {
+      background-color: transparent;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+    border-bottom: 2px solid #f7b90f;
+    background-color: #3f3f44;
+  }
+
+  .btn-wrapper {
+    display: none;
+  }
+
+  .menu-btn {
+    margin-right: 0;
+  }
+
+  .hero {
+    padding: 0;
+    margin-bottom: 30px;
+    &__inner {
+      padding: 15px;
+      margin-top: 20px;
+    }
+  }
+
+  .partners {
+    &__bg {
+      margin: 0 0 30px 0;
+      padding: 15px;
+    }
+    &__title {
+      font-size: 26px;
+    }
+  }
+
+  .task {
+    &__inner {
+      margin: 0 0 30px 0;
+      padding: 15px;
+    }
+    &__title {
+      font-size: 26px;
+    }
+    &__subtitle {
+      font-size: 16px;
+    }
+  }
+
+  .portfolio {
+    &__offer {
+      flex-wrap: wrap;
+      &::before {
+        display: none;
+      }
+    }
+    &__offer-title {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    &__offer-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .marketing {
+    &__bg {
+      padding: 15px;
+    }
+    &__title {
+      font-size: 26px;
+    }
+    &__line {
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      font-size: 16px;
+    }
+  }
+
+  .deal {
+    &__wrapper {
+      margin: 0 0 30px 0;
+      padding: 15px;
+    }
+    &__title {
+      font-size: 26px;
+    }
+    &__item {
+      padding-left: 0;
+    }
+    &__item-img {
+      display: none;
+    }
+    &__subtitle {
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+  }
+
+  .scale {
+    &__map {
+      margin: 0 0 30px 0;
+    }
+    &__title {
+      border: none;
+      border-radius: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .request {
+    &__wrapper {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  .bg-decor__wrapper {
+    display: none;
+  }
+
+  .popup {
+    &__content {
+      padding: 25px 15px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .scale {
+    &__decor {
+      font-size: 60px;
+      text-align: center;
+    }
+  }
+
+  .popup {
+    &__decor {
+      display: none;
+    }
+  }
+
+  .popup-partners {
+    &__title {
+      padding-left: 0;
+      margin-bottom: 20px;
+      &::before {
+        display: none;
+      }
+    }
+    &__list {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .hero {
+    &__title {
+      font-size: 30px;
+      line-height: 37px;
+      margin-bottom: 15px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    &__border {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__form-title {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    &__bage {
+      display: block;
+    }
+    &__bage-item {
+      width: 100%;
+    }
+    &__bage-item + .hero__bage-item {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+  .tabs {
+    &__nav-items + .tabs__nav-items {
+      margin-left: 5px;
+    }
+    &__icon {
+      display: none;
+    }
+    &__nav {
+      margin-bottom: 20px;
+    }
+  }
+
+  .partners {
+    &__subtitle {
+      font-size: 16px;
+    }
+    &__niche,
+    &__niche-icon {
+      width: 100%;
+    }
+    &__slider {
+      flex-wrap: wrap;
+    }
+    &__slider-text {
+      min-width: 100%;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 90px;
+    }
+    &__slider-title {
+      margin-bottom: 15px;
+    }
+    &__slider-next,
+    &__slider-prev {
+      top: 20px;
+    }
+    &__slider-nav {
+      padding-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  .portfolio {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .marketing {
+    &__description-text {
+      padding: 15px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .tabs {
+    &__nav-text {
+      font-size: 10px;
+    }
+    &__content-wrapper {
+      display: block;
+    }
+    &__content {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .portfolio {
+    &__offer {
+      padding: 15px;
+    }
+  }
+
+  .marketing {
+    &__description-header {
+      margin-bottom: 20px;
+    }
+    &__description-accent {
+      display: none;
+    }
+    &__description-text {
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+  }
+
+  .deal {
+    &__subtitle,
+    &__item-text {
+      max-width: 100%;
+      width: 100%;
+    }
+    &__item + .deal__item {
+      margin-top: 20px;
+    }
+  }
+
+  .popup-partners {
+    &__list {
+      padding-top: 15px;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .hero {
+    &__title {
+      font-size: 26px;
+      line-height: 33px;
+    }
+  }
+
+  .logo {
+    width: 170px;
+  }
+
+  .scale {
+    &__title {
+      font-size: 22px;
+    }
+    &__decor {
+      font-size: 40px;
+    }
+  }
+
+  .popup-partners {
+    &__title {
+      font-size: 20px;
+    }
+    &__item {
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
   }
 }
