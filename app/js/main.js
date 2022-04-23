@@ -138,9 +138,9 @@ const addActiveClass = (element, index, className = '--active-tab') => {
 }
 
 const checkoutTabs = (item, index) => {
-  item.addEventListener('click', () =>{
+  item.addEventListener('click', () => {
 
-    if (item.classList.contains ('--active-tab')) return
+    if (item.classList.contains('--active-tab')) return
 
     clearActiveClass(tabItem)
     clearActiveClass(tabContent)
@@ -181,7 +181,7 @@ marketingItem.forEach(checkoutMarketingTabs)
 
 
 var swiper = new Swiper(".swiperPartners", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 10,
   loop: true,
   navigation: {
@@ -191,6 +191,14 @@ var swiper = new Swiper(".swiperPartners", {
   pagination: {
     el: ".partners-pagination",
     clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    880: {
+      slidesPerView: 3,
+    },
   },
 });
 
@@ -257,8 +265,8 @@ if (sidebarClose) {
 }
 if (contentSidebarClose) {
   contentSidebarClose.addEventListener("click", function () {
-    menuBtn.classList.toggle('--sidebar-active');
-    sidebar.classList.toggle('--sidebar-active');
-    content.classList.toggle('--sidebar-active');
+    menuBtn.classList.remove('--sidebar-active');
+    sidebar.classList.remove('--sidebar-active');
+    content.classList.remove('--sidebar-active');
   });
 }
