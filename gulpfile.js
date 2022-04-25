@@ -35,6 +35,7 @@ function scripts() {
     'node_modules/simplebar/dist/simplebar.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
     'node_modules/jarallax/dist/jarallax.min.js',
+    'node_modules/wow.js/dist/wow.min.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))

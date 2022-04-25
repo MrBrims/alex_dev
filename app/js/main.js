@@ -270,3 +270,26 @@ if (contentSidebarClose) {
     content.classList.remove('--sidebar-active');
   });
 }
+
+var wow = new WOW(
+  {
+    boxClass: 'wow',
+    animateClass: 'animate__animated',
+    offset: 150,
+    mobile: true,
+    live: true,
+    callback: function (box) {
+    },
+    scrollContainer: null,
+    resetAnimation: true,
+  }
+);
+wow.init();
+
+const preloader = document.querySelector('.preloader');
+window.addEventListener ('load', () => {
+  preloader.classList.add('--hide');
+  setTimeout(() => {
+    preloader.remove();
+  }, 300);
+})
